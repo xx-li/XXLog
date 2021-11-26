@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0128CE907C0766B50ED78FE5 /* Pods_XXLog_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DDBCE555A9B3F72A0F67FE /* Pods_XXLog_Example.framework */; };
+		11057EF42750D3FB003A891F /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11057EF32750D3FB003A891F /* TestSwift.swift */; };
 		1EDFA08B4F0AD0BC55F917B4 /* Pods_XXLog_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 114C2BE5819AB62C233B924A /* Pods_XXLog_Tests.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -15,7 +16,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* XXAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* XXAppDelegate.m */; };
-		6003F5A7195388D20070C39A /* XXViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* XXViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -38,8 +38,10 @@
 
 /* Begin PBXFileReference section */
 		0DF232B67F1DCAA5C5E9DEC0 /* Pods-XXLog_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXLog_Tests.release.xcconfig"; path = "Target Support Files/Pods-XXLog_Tests/Pods-XXLog_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		11057EF22750D3FA003A891F /* XXLog_Example-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XXLog_Example-Bridging-Header.h"; sourceTree = "<group>"; };
+		11057EF32750D3FB003A891F /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
 		114C2BE5819AB62C233B924A /* Pods_XXLog_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XXLog_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		49700D59BFE10ABE808A5410 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		49700D59BFE10ABE808A5410 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* XXLog_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XXLog_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -50,8 +52,6 @@
 		6003F59B195388D20070C39A /* XXLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XXLog-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* XXAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* XXAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* XXViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XXViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* XXViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XXViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6003F5AE195388D20070C39A /* XXLog_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XXLog_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -64,8 +64,8 @@
 		928BE55A998D8C444B707DFA /* Pods-XXLog_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXLog_Tests.debug.xcconfig"; path = "Target Support Files/Pods-XXLog_Tests/Pods-XXLog_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		96DDBCE555A9B3F72A0F67FE /* Pods_XXLog_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XXLog_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A545685C0BB58E590924087F /* Pods-XXLog_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXLog_Example.debug.xcconfig"; path = "Target Support Files/Pods-XXLog_Example/Pods-XXLog_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		AB3C9A2C2799B0697B70D3FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		EC45F16BC8AF35A25B74A6A1 /* XXLog.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = XXLog.podspec; path = ../XXLog.podspec; sourceTree = "<group>"; };
+		AB3C9A2C2799B0697B70D3FE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		EC45F16BC8AF35A25B74A6A1 /* XXLog.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = XXLog.podspec; path = ../XXLog.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ED0BCE2DB2D0AFA0AE17FB9C /* Pods-XXLog_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XXLog_Example.release.xcconfig"; path = "Target Support Files/Pods-XXLog_Example/Pods-XXLog_Example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,6 @@
 				928BE55A998D8C444B707DFA /* Pods-XXLog_Tests.debug.xcconfig */,
 				0DF232B67F1DCAA5C5E9DEC0 /* Pods-XXLog_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -147,11 +146,11 @@
 				6003F59C195388D20070C39A /* XXAppDelegate.h */,
 				6003F59D195388D20070C39A /* XXAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				6003F5A5195388D20070C39A /* XXViewController.h */,
-				6003F5A6195388D20070C39A /* XXViewController.m */,
+				11057EF32750D3FB003A891F /* TestSwift.swift */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				11057EF22750D3FA003A891F /* XXLog_Example-Bridging-Header.h */,
 			);
 			name = "Example for XXLog";
 			path = XXLog;
@@ -248,6 +247,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = lixinxing;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = PGLR8SXPQP;
+						LastSwiftMigration = 1310;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -365,8 +369,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* XXAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* XXViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				11057EF42750D3FB003A891F /* TestSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,12 +498,18 @@
 			baseConfigurationReference = A545685C0BB58E590924087F /* Pods-XXLog_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = PGLR8SXPQP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XXLog/XXLog-Prefix.pch";
 				INFOPLIST_FILE = "XXLog/XXLog-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XXLog/XXLog_Example-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -510,12 +520,17 @@
 			baseConfigurationReference = ED0BCE2DB2D0AFA0AE17FB9C /* Pods-XXLog_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = PGLR8SXPQP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XXLog/XXLog-Prefix.pch";
 				INFOPLIST_FILE = "XXLog/XXLog-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "XXLog/XXLog_Example-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -525,6 +540,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 928BE55A998D8C444B707DFA /* Pods-XXLog_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -550,6 +566,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0DF232B67F1DCAA5C5E9DEC0 /* Pods-XXLog_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

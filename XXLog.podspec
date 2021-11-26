@@ -28,15 +28,12 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/lixinxing/XXLog.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '12.0'
 
   s.source_files = 'XXLog/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'XXLog' => ['XXLog/Assets/*.png']
-  # }
+  s.vendored_frameworks = "XXLog/Frameworks/mars.framework"
+  s.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
+  s.libraries = 'z','resolv.9'
+  s.public_header_files = 'XXLog/Classes/*.h'
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
