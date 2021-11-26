@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'XXLog_Example' do
+  pod 'XXLog', :path => '../'
+
+  target 'XXLog_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
