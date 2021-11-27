@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'XXLog'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of XXLog.'
+  s.summary          = '基于Mars xlog组件封装的日志框架，可以方便的在OC和Swift中进行使用。'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,22 +18,25 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  XXLog是一个基于Mars的xlog组件封装的日志框架，提供便捷的api，可以方便的在OC和Swift中进行使用。
                        DESC
 
-  s.homepage         = 'https://github.com/lixinxing/XXLog'
+  s.homepage         = 'https://github.com/xx-li/XXLog'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lixinxing' => 'x@devlxx.com' }
-  s.source           = { :git => 'https://github.com/lixinxing/XXLog.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/xx-li/XXLog.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '12.0'
+  s.swift_versions = '5.0'
 
   s.source_files = 'XXLog/Classes/**/*'
   s.vendored_frameworks = "XXLog/Frameworks/mars.framework"
   s.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
   s.libraries = 'z','resolv.9'
   s.public_header_files = 'XXLog/Classes/*.h'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end

@@ -1,4 +1,4 @@
-XXLog是一个基于[Mars](https://github.com/Tencent/mars)开发的日志框架，基于`Mars`的日志组建进行了封装，可以方便的在`OC`和`Swift`中进行使用
+XXLog是一个基于[Mars](https://github.com/Tencent/mars)开发的日志框架，基于`Mars`的日志组件进行了封装，可以方便的在`OC`和`Swift`中进行使用
 
 ## 说明
 在项目开发中，我们除了常规的控制台查看日志之外，还会碰到测试人员或用户出现异常情况无法定位情况，如果能看到项目运行全流程的日志，那么对问题的排查将会如虎添翼。
@@ -106,58 +106,3 @@ PUB_KEY = "572d1e2710ae5fbca54c76a382fdd44050b3a675cb2bf39feebe85ef63d947aff0fa4
 环境：新建项目release方式run在iphonexr上
 新打包大小： 184kb
 添加XXLog后打包大小：1.1MB
-
-## 使用
-
-1. 打印出模拟器的log目录：
-NSString* logPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/log"];
-NSLog(@"%@", logPath);
-
-2. 在finder中打开此目录下载到log文件
-
-
-### 解码
-项目的解码脚本分别是`decode_mars_nocrypt_log_file.py`（不加密）和`decode_mars_crypt_log_file.py`（加密），两个脚本都是用python2编写，但是有开发者在项目的[issue](https://github.com/Tencent/mars/issues/804)中提供了python3的脚本，亲测可用，你可以使用issue中的python3脚本直接替换原有的脚本，下面这部分的使用都基于python3进行说明。
-
-#### 如何获取log文件
-- 模拟器中可以打印出log文件目录，然后在finder中打开此目录找到log文件
-- 真机中一般通过网络接口下载到服务器，然后从服务器下载
-
-#### 依赖安装
-- 均需要依赖库`zstandard`，直接`pip3 install zstandard`安装
-- 使用`decode_mars_crypt_log_file.py`加密log解码脚本，需要额外安装依赖`pyelliptic`，当前环境默认安装到是`1.5.8`版本，但是实际需要安装`1.5.10`版本，通过`pip3 install https://github.com/mfranciszkiewicz/pyelliptic/archive/1.5.10.tar.gz\#egg\=pyelliptic`命令进行安装。详细说明见[issue](https://github.com/Tencent/mars/issues/501)
-
-执行完以上操作后，则装完了所有依赖。
-
-#### 不加密log文件的解码
-直接使用`decode_mars_nocrypt_log_file.py`脚本对log文件进行解密即可，命令：
-`python3 decode_mars_nocrypt_log_file.py log文件路径`
-
-执行完命令后会在log文件路径下生成一个新的log文件，直接打开这个log文件即可查看日志
-
-
-#### 加密log文件的解码
-xlog使用非对称加密，使用前需要使用提供的脚本`gen_key.py`生成公钥和私钥。
-在框架api调用时设置公钥，则会使用这个公钥对日志进行加密。然后在解码脚本中设置好相应的公钥和私钥，样例如下：
-
-- 项目中：
-```obj-c
-// ... 省略代码
-mars::xlog::XLogConfig config;
-// 脚本生成的公钥
-config.pub_key_ = "572d1e2710ae5fbca54c76a382fdd44050b3a675cb2bf39feebe85ef63d947aff0fa4943f1112e8b6af34bebebbaefa1a0aae055d9259b89a1858f7cc9af9df1";
-// ... 省略代码
-appender_open(config);
-```
-
-- 脚本`decode_mars_crypt_log_file.py`中：
-```python
-# ...
-PRIV_KEY = "145aa7717bf9745b91e9569b80bbf1eedaa6cc6cd0e26317d810e35710f44cf8"
-PUB_KEY = "572d1e2710ae5fbca54c76a382fdd44050b3a675cb2bf39feebe85ef63d947aff0fa4943f1112e8b6af34bebebbaefa1a0aae055d9259b89a1858f7cc9af9df1"
-# ...
-```
-
-设置好公钥和私钥后，则调用命令进行解码：`python3 script/decode_mars_crypt_log_file.py log文件`，
-执行完命令后会在log文件路径下生成一个新的log文件，直接打开这个log文件即可查看日志。
-
