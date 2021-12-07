@@ -101,6 +101,9 @@ PUB_KEY = "572d1e2710ae5fbca54c76a382fdd44050b3a675cb2bf39feebe85ef63d947aff0fa4
 设置好公钥和私钥后，则调用命令进行解码：`python3 script/decode_mars_crypt_log_file.py 日志文件`，
 执行完命令后会在日志文件路径下生成一个新的`.log`文件，直接打开这个`.log`文件即可查看日志
 
+## mars更新
+mars项目本身不支持xcframework，在m1机器多模拟器上只能以rosetta方式运行。我写了一个脚本`script/build_ios_xcframework.py`，脚本会下载最新的项目源码，并创建出对应的`mars.xcframework`。
+
 
 ## 包大小对比
 环境：新建项目release方式run在iphonexr上

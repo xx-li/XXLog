@@ -35,6 +35,13 @@ Carthage/Build
 # `pod install` in .travis.yml
 #
 # Pods/
+
 Example/Pods/
 Example/Podfile.lock
 Example/XXLog.xcworkspace/
+script/temp/
+script/intel/
+script/simulator/
+script/m1/
+script/os/
+

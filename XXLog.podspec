@@ -32,11 +32,9 @@ Pod::Spec.new do |s|
   s.swift_versions = '5.0'
 
   s.source_files = 'XXLog/Classes/**/*'
-  s.vendored_frameworks = "XXLog/Frameworks/mars.framework"
+  s.vendored_frameworks = "XXLog/Frameworks/mars.xcframework"
   s.frameworks = 'Foundation','CoreTelephony','SystemConfiguration'
   s.libraries = 'z','resolv.9'
   s.public_header_files = 'XXLog/Classes/*.h'
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 
 end
