@@ -29,7 +29,7 @@ config = [[XXLogConfig alloc] initWithPath:logPath level:XXLogLevelDebug isConso
 #else
 config = [[XXLogConfig alloc] initWithPath:logPath level:XXLogLevelVerbose isConsoleLog:false pubKey:nil cacheDays:7];
 #endif
-[[LogHelper sharedHelper] setupConfig:config];
+[[XXLogHelper sharedHelper] setupConfig:config];
 
 // 第二步，初始化后即可使用。
 LOG_DEBUG("模块名", @"我是日志内容-使用OC打印");
@@ -53,10 +53,17 @@ isConsoleLog = false
 let documentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
 let path =  NSString.path(withComponents: [documentPath, "log"])
 let config = XXLogConfig.init(path: path, level: logLevel, isConsoleLog: isConsoleLog, pubKey: nil, cacheDays: 7)
-LogHelper.shared().setupConfig(config)
+XXLogHelper.shared().setupConfig(config)
 
 // 第二步，初始化后即可使用。
 LOG_WARNING("模块名", "我说日志内容--使用swift打印")
+```
+
+程序退出时，需要调用接口将缓存写入，样例如下：
+```
+- (void)applicationWillTerminate:(UIApplication *)application {
+    [XXLogHelper logAppenderClose];
+}
 ```
 
 ### 日志的导出
@@ -98,7 +105,7 @@ PUB_KEY = "572d1e2710ae5fbca54c76a382fdd44050b3a675cb2bf39feebe85ef63d947aff0fa4
 # ...
 ```
 
-设置好公钥和私钥后，则调用命令进行解码：`python3 script/decode_mars_crypt_log_file.py 日志文件`，
+设置好公钥和私钥后，则调用命令进行解码：`python3 script/decode_mars_crypt_log_file.py 日志文件 私钥`，
 执行完命令后会在日志文件路径下生成一个新的`.log`文件，直接打开这个`.log`文件即可查看日志
 
 ## mars更新
