@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'XXLog'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = '基于Mars xlog组件封装的日志框架，可以方便的在OC和Swift中进行使用。'
 
 # This description is used to generate tags and improve search results.

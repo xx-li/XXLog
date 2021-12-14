@@ -8,7 +8,7 @@ XXLog是一个基于[Mars](https://github.com/Tencent/mars)开发的日志框架
 推荐使用Cocoapods进行安装，在项目的`Podfile`中添加：
 
 ```ruby
-pod 'XXLog', '~> 0.1.0'
+pod 'XXLog', '~> 0.2.0'
 ```
 
 ## 使用
